@@ -5,64 +5,63 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}"/>
+
         <title>Laravel</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 0;
-            }
+        <div class="wrapper">
+            <header>
 
-            .full-height {
-                height: 100vh;
-            }
+                <nav>
 
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
+                    <div class="menu-icon">
+                        <i class="fa fa-bars fa-2x"></i>
+                    </div>
 
-            .position-ref {
-                position: relative;
-            }
+                    <div class="logo">
+                        BARROC IT
+                    </div>
 
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
+                    <div class="menu">
 
-            .content {
-                text-align: center;
-            }
+                        <ul>
+                            <li><a href="#">HOME</a></li>
+                            <li><a href="#">SERVICES</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <div class="flex-center position-ref full-height">
+                                @if (Route::has('login'))
+                                    <div class="top-right links">
+                                        @auth
+                                            <a href="{{ url('/home') }}">Home</a>
+                                        @else
+                                            <a href="{{ route('login') }}">Login</a>
+                                            <a href="{{ route('register') }}">Register</a>
+                                        @endauth
+                                    </div>
+                                @endif
+                            <i class="far fa-question-circle"></i>
+                        </ul>
 
-            .title {
-                font-size: 84px;
-            }
+                    </div>
+                </nav>
 
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
+            </header>
 
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
+            <!-- ================ sticky nav bar pre ============= -->
+
+            <div class="container">
+                <div class="welcometext">
+                    <h1>WELCOME</h1>
+                </div>
+            </div>
+            <div class="subtext">
+                <p>We're thrilled that you are using the new application, to begin click one of the buttons above!</p>
+                <p>If you need help or have any questions then look for the "?" located at the top right on every page.</p>
+            </div>
     </head>
     <body>
         <div class="flex-center position-ref full-height">
