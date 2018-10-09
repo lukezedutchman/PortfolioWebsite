@@ -7,10 +7,12 @@
 
         <link rel="stylesheet" type="text/css" href="{{asset('css/home.css')}}"/>
 
-        <title>Laravel</title>
+        <title>barroc-it</title>
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
 
         <!-- Styles -->
         <div class="wrapper">
@@ -23,29 +25,26 @@
                     </div>
 
                     <div class="logo">
-                        BARROC IT
+                        <a>BARROC IT</a>
                     </div>
 
                     <div class="menu">
 
                         <ul>
-                            <li><a href="#">HOME</a></li>
-                            <li><a href="#">SERVICES</a></li>
-                            <li><a href="#">CONTACT</a></li>
-                            <div class="flex-center position-ref full-height">
-                                @if (Route::has('login'))
-                                    <div class="top-right links">
+
+                            <i class="fas fa-question"></i>
+                                <li>@if (Route::has('login'))
+
                                         @auth
                                             <a href="{{ url('/home') }}">Home</a>
                                         @else
-                                            <a href="{{ route('login') }}">Login</a>
-                                            <a href="{{ route('register') }}">Register</a>
-                                        @endauth
+                                            <a href="{{ route('login') }}">LOGIN</a>
+                            <li><a href="#"></a>
+                                            <a href="{{ route('register') }}">REGISTER</a>
+                                        @endauth </li>
+                            <i class="fas fa-sign-out-alt"></i>
                                     </div>
                                 @endif
-                            <i class="far fa-question-circle"></i>
-                        </ul>
-
                     </div>
                 </nav>
 
@@ -60,36 +59,7 @@
             </div>
             <div class="subtext">
                 <p>We're thrilled that you are using the new application, to begin click one of the buttons above!</p>
-                <p>If you need help or have any questions then look for the "?" located at the top right on every page.</p>
+                <p>If you need help or have any questions then look for the "?" located at the nav bar on every page.</p>
             </div>
     </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @auth
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ route('login') }}">Login</a>
-                        <a href="{{ route('register') }}">Register</a>
-                    @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
-            </div>
-        </div>
-    </body>
 </html>

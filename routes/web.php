@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('../auth/login');
 });
 
 Route::get('/schedule_appointment', function () {
@@ -20,5 +20,12 @@ Route::get('/schedule_appointment', function () {
 });
 
 Auth::routes();
+
+Route::get('/administrator', function () {
+    return view('/administrator/administrator');
+});
+
+
+
 
 Route::get('/home', 'HomeController@index')->name('home');
