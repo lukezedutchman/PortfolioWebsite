@@ -1,0 +1,160 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.main {
+    max-width: 80%;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    display: flex;
+}
+nav {
+    border-bottom: 1px solid #808080;
+    float: left;
+    display: flex;
+    width: 100%;
+    text-decoration: none #555555;
+    padding: 1em 2em;
+    color: #808080;
+    text-shadow: 1px 1px 2px black;
+
+}
+.navbarflex {
+    display: flex;
+}
+.navbuttons {
+    float: right;
+    display: flex;
+    justify-content: space-around;
+}
+.navbutton {
+    padding: 10px 5px;
+    margin: 5px;
+    border: 1px solid #000;
+}
+#helpfuncion h2 {
+    font-weight: 900;
+}
+
+nav h2 {
+    margin: 0.8em;
+}
+h1 {
+    font-size: 1em;
+}
+h1 b {
+    font-size: 2em;
+}
+
+/* Help Function */
+/* Tooltip container */
+.tooltip {
+    position: center;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip .tooltiptext::after {
+    width: 120px;
+    top: 100%;
+    left: 50%;
+    margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
+/* Nav bar buttons */
+.navbutton {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: grey;
+    text-align: center;
+    font-size: 1em;
+    padding: 20px;
+    width: 300px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.navbutton span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.navbutton span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.navbutton:hover span {
+    padding-right: 25px;
+    color: black;
+}
+
+.navbutton:hover span:after {
+    opacity: 1;
+    right: 0;
+    color: black;
+}
+
+/* Create Invoice */
+input[type=text], [type=date], select, textarea {
+    width: 30%;
+    padding: 12px 20px;
+    margin: 25px 125px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 30%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 25px 125px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+input {
+    margin: 20px 100px;
+}
+
+input #invoicetotal {
+    margin: -200px 0px 0px 0px
+}
