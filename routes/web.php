@@ -38,6 +38,9 @@ Route::get('/administrator', function () {
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/finance', function () {
+    return view('/finance/finance_index');
+});
 Route::get('/create_invoice', function() {
     return view('/finance/finance_create_invoice');
 });

@@ -30,4 +30,8 @@ class HomeController extends Controller
     {
         return view('administrator');
     }
+    public function finance()
+    {
+        return view('finance');
+    }
 }
