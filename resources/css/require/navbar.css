@@ -3,11 +3,6 @@
     padding: 0px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-
-.main {
-    max-width: 80%;
-    margin: auto;
-}
 nav {
     border-bottom: 1px solid #808080;
     float: left;

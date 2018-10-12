@@ -19,6 +19,14 @@ Route::get('/schedule_appointment', function () {
     return view('/sales/sales_schedule_appointment');
 });
 
+Route::get('/create_client', function () {
+    return view('/sales/sales_create_client');
+});
+
+Route::get('/create_project', function () {
+    return view('/sales/sales_create_project');
+});
+
 Auth::routes();
 
 Route::get('/administrator', function () {
