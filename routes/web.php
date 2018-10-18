@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/schedule_appointment', function () {
-    return view('/sales/sales_schedule_appointment');
+    return view('/development/development_schedule_appointment');
 });
 
 Route::get('/create_client', function () {
@@ -27,13 +27,15 @@ Route::get('/create_project', function () {
     return view('/sales/sales_create_project');
 });
 
-Auth::routes();
+Route::get('/appointments', function () {
+    return view('/sales/sales_appointments');
+});
 
 Route::get('/administrator', function () {
     return view('/administrator/administrator');
 });
 
-
+Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
