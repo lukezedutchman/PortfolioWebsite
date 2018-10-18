@@ -3,15 +3,18 @@
     padding: 0px;
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
+body, html{
+    height: 100%;
 
+}
 
 nav {
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid #4d4d4d;
     float: left;
     display: flex;
     width: 100%;
     text-decoration: none #555555;
-    color: #808080;
+    color: #4d4d4d;
 }
 .navbarflex {
     display: flex;
@@ -80,7 +83,7 @@ h1 {
     display: inline-block;
     border-radius: 3px;
     border: none;
-    color: grey;
+    color: #4d4d4d;
     text-align: center;
     font-size: 0.9em;
     padding: 10px;
@@ -119,7 +122,7 @@ h1 {
 }
 .main{
     text-align: center;
-    color: #808080;
+    color: #4d4d4d;
 }
 .main h2{
     font-size: 7em;
@@ -135,10 +138,13 @@ h1 {
 .tooltip i{
     text-decoration: none;
     font-size: 1.5em;
-    color: #808080;
+    color: #4d4d4d;
 }
 .main{
     background-image: url("welcome_barroc.jpg");
+    height: 100%;
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
