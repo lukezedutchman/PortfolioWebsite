@@ -89,7 +89,8 @@
                             <h2><i class="fas fa-dollar-sign"></i></h2>
                         </div>
                         <div class="flip-box-back">
-                            <h2>FINANCE</h2>
+                            <a href="{{ url('/finance') }}"><h2>FINANCE</h2></a>
+
                         </div>
                     </div>
                 </div>
@@ -102,7 +103,7 @@
                             <h2><i class="fas fa-laptop-code"></i></h2>
                         </div>
                         <div class="flip-box-back">
-                            <h2>DEVELOPMENT</h2>
+                            <a href="{{ url('/development') }}"><h2>DEVELOPMENT</h2></a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +115,7 @@
                             <h2><i class="fas fa-chart-line"></i></h2>
                         </div>
                         <div class="flip-box-back">
-                            <h2>SALES</h2>
+                            <a href="{{ url('/sales') }}"><h2>SALES</h2></a>
                         </div>
                     </div>
                 </div>

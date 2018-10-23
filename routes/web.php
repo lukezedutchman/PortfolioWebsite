@@ -11,6 +11,8 @@
 |
 */
 
+/*
+
 Route::get('/', function () {
     return view('../auth/login');
 });
@@ -31,11 +33,7 @@ Route::get('/appointments', function () {
     return view('/sales/sales_appointments');
 });
 
-Route::get('/administrator', function () {
-    return view('/administrator/administrator');
-});
 
-Auth::routes();
 
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -46,3 +44,42 @@ Route::get('/finance', function () {
 Route::get('/create_invoice', function() {
     return view('/finance/finance_create_invoice');
 });
+
+*/
+
+/*  Finance pages  */
+
+Route::get('/', 'HomeController@index');
+
+Route::get('/finance', 'FinanceController@index');
+Route::get('/finance/schedule-appointment', 'FinanceController@show');
+Route::get('/finance/client-information', 'FinanceController@show');
+Route::get('/finance/create-client', 'FinanceController@show');
+
+/*  Sales pages  */
+
+Route::get('/sales', 'SalesController@index');
+Route::get('/finance/schedule-appointment', 'FinanceController@show');
+Route::get('/finance/client-information', 'FinanceController@show');
+Route::get('/finance/create-client', 'FinanceController@show');
+
+/*  Development pages  */
+
+Route::get('/development', 'DevelopmentController@index');
+Route::get('/finance/schedule-appointment', 'FinanceController@show');
+Route::get('/finance/client-information', 'FinanceController@show');
+Route::get('/finance/create-client', 'FinanceController@show');
+
+
+
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
+
+
+
+
+Route::get('/administrator', function () {
+    return view('/administrator/administrator');
+});
+
+Auth::routes();
