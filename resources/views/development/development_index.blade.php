@@ -46,9 +46,7 @@
                     <!-- Authentication Links -->
                     @guest
                         <li class="nav-item">
-                            @if (Route::has('register'))
-                                <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                            @endif
+
                         </li>
                     @else
                         <li class="nav-item dropdown">
@@ -67,7 +65,6 @@
                                     @csrf
                                 </form>
                             </div>
-                            <a href="{{ url('/finance') }}">Some Text</a>
                         </li>
 
                     @endguest
@@ -81,6 +78,54 @@
     </main>
 </div>
 
+<!-- mid center section admin page */ -->
+<div class="container">
+    <div class="selectdepartement">
+        <ul>
+            <li>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h2><i class="fas fa-plus"></i></h2>
+                        </div>
+                        <div class="flip-box-back">
+                            <a href="{{ url('/finance/create') }}"><h2>CREATE INVOICE</h2></a>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h2><i class="fas fa-users"></i></h2>
+                        </div>
+                        <div class="flip-box-back">
+                            <a href="{{ url('/finance/client') }}"><h2>CLIENT INFORMATION</h2></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <h2><i class="fas fa-file-alt"></i></h2>
+                        </div>
+                        <div class="flip-box-back">
+                            <a href="{{ url('/finance/overview') }}"><h2>OVERVIEW INVOICES</h2></a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <!-- end mid center section admin page -->
 
 
 

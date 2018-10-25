@@ -12,4 +12,21 @@ class FinanceController extends Controller
     {
         return view('finance/finance_index');
     }
+
+    public function create()
+    {
+        return view('finance/finance_create_invoice');
+    }
+
+    public function overview()
+    {
+        return view('finance/finance_overview_invoices');
+    }
+
+    public function client()
+    {
+        return view('finance/finance_client_information');
+    }
 }
+
+

@@ -52,16 +52,16 @@ Route::get('/create_invoice', function() {
 Route::get('/', 'HomeController@index');
 
 Route::get('/finance', 'FinanceController@index');
-Route::get('/finance/schedule-appointment', 'FinanceController@show');
-Route::get('/finance/client-information', 'FinanceController@show');
-Route::get('/finance/create-client', 'FinanceController@show');
+Route::get('/finance/create', 'FinanceController@create');
+Route::get('/finance/client', 'FinanceController@client');
+Route::get('/finance/overview', 'FinanceController@overview');
 
 /*  Sales pages  */
 
 Route::get('/sales', 'SalesController@index');
-Route::get('/finance/schedule-appointment', 'FinanceController@show');
-Route::get('/finance/client-information', 'FinanceController@show');
-Route::get('/finance/create-client', 'FinanceController@show');
+Route::get('/sales/schedule', 'SalesController@schedule');
+Route::get('/sales/client', 'SalesController@client');
+Route::get('/sales/create', 'SalesController@create');
 
 /*  Development pages  */
 
@@ -70,16 +70,28 @@ Route::get('/finance/schedule-appointment', 'FinanceController@show');
 Route::get('/finance/client-information', 'FinanceController@show');
 Route::get('/finance/create-client', 'FinanceController@show');
 
+/*  Admin check route */
+
+Route::get('/admin', 'AdminController@admin')
+    ->middleware('is_admin')
+    ->name('admin');
+
+
+
+
+
+
 
 
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('/admin', 'AdminController@index');
 
 
 
 Route::get('/administrator', function () {
     return view('/administrator/administrator');
 });
+
 
 Auth::routes();
