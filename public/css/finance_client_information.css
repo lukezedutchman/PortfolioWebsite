@@ -124,43 +124,4 @@ h1 b {
     color: black;
 }
 
-/* Create Invoice */
-input[type=text], [type=date], select, textarea {
-    width: 30%;
-    padding: 12px 20px;
-    margin: 25px 125px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type=submit] {
-    width: 30%;
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 25px 125px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-input {
-    margin: 20px 100px;
-}
-
-input #invoicetotal {
-
-}
-.wrapper-for-button input{
-    display: flex;
-    width: 100%;
-}
-.wrapper {
-    display: flex;
-    margin-left: 5px;
-}
+/* Search bar */

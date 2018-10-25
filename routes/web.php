@@ -45,6 +45,7 @@ Route::get('/create_invoice', function() {
     return view('/finance/finance_create_invoice');
 });
 
+<<<<<<< HEAD
 */
 
 /*  Finance pages  */
@@ -95,3 +96,9 @@ Route::get('/administrator', function () {
 
 
 Auth::routes();
+=======
+Route::get ( '/search', function () {
+    $data = App\Data::all ();
+    return view ( '/finance/finance_client_information' )->withData ( $data );
+} );
+>>>>>>> master
