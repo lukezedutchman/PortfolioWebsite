@@ -93,12 +93,12 @@ Route::get('/admin', 'AdminController@index');
 Route::get('/administrator', function () {
     return view('/administrator/administrator');
 });
-
+/*
 
 Auth::routes();
-=======
 Route::get ( '/search', function () {
     $data = App\Data::all ();
     return view ( '/finance/finance_client_information' )->withData ( $data );
 } );
 >>>>>>> master
+*/
