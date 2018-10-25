@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientContactForeign extends Migration
+class CreateProjectsInvoiceForeign extends Migration
 {
     /**
      * Run the migrations.
@@ -14,9 +14,12 @@ class CreateClientContactForeign extends Migration
     public function up()
     {
         // vastleggen van de relatie tussen games en publishers
-        Schema::table('client_information', function (Blueprint $table) {
+        Schema::table('projects', function (Blueprint $table) {
 
-            $table->foreign('client_id')->references('id')->on('client_contact');
+            $table->foreign('invoice_id')
+                ->references('id')
+                ->on('invoice')
+                ->onDelete('cascade');
         });
     }
 
@@ -27,8 +30,6 @@ class CreateClientContactForeign extends Migration
      */
     public function down()
     {
-        Schema::table('client_information', function (Blueprint $table){
-            $table->dropForeign(['client_id']);
-        });
+        Schema::dropIfExists('projects');
     }
 }

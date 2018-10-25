@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientInformationTable extends Migration
+class CreateTblClientInformation extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,22 @@ class CreateClientInformationTable extends Migration
      */
     public function up()
     {
+
         Schema::create('client_information', function (Blueprint $table) {
             $table->increments('id');
             $table->unsignedInteger('client_id');
-            $table->unsignedInteger('project_id');
-            $table->unsignedInteger('invoice_id');
+            $table->unsignedInteger('client_info_id');
+            $table->boolean('Prospect');
             $table->boolean('creditworthy');
-            $table->date('last_contact_date');
-            $table->date('next_appointment');
-            $table->date('date_of_appointment');
-            $table->boolean('prospect');
+            $table->string('company_name');
+            $table->string('ledger_account');
+            $table->string('maintenance_contract');
+            $table->string('btw_code');
+            $table->string('open_project');
+            $table->string('bank_account_number');
+            $table->string('offer_numbers');
+            $table->string('offer_status');
+            $table->integer('debt_limit');
 
 
         });
@@ -35,6 +41,6 @@ class CreateClientInformationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_information');
+        //
     }
 }

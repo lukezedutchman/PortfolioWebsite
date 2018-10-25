@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateClientProjectTable extends Migration
+class CreateTblContactPerson extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,12 @@ class CreateClientProjectTable extends Migration
      */
     public function up()
     {
-        Schema::create('client_project', function (Blueprint $table) {
+        Schema::create('contact_person', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('project_name');
-            $table->string('project_state');
-            $table->date('start_date_project');
-            $table->date('end_date_project');
-            $table->string('description');
-
-
+            $table->string('contact_person_id');
+            $table->string('contact_name');
+            $table->string('initials');
+            $table->date('last_contact_date');
         });
     }
 
@@ -32,6 +29,6 @@ class CreateClientProjectTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('client_project');
+        //
     }
 }
