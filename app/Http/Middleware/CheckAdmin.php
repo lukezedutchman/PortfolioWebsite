@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Support\Facades\Auth;
 
 class CheckAdmin
 {
@@ -15,7 +16,7 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        $id = Auth::User()->id;
+        $id = Auth::User()->DepartmentID;
 
         if(Auth::guard($id) == 1){
             return $next($request);

@@ -20,7 +20,7 @@
 </head>
 <body>
 <div class="welcometexthome">
-    <H1>select your departement</H1>
+    <h1>Select your department</h1>
 </div>
 <!-- mid center section admin page */ -->
 <div class="container">

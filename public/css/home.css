@@ -164,6 +164,7 @@ nav {
     position: fixed;
     width: 100%;
     line-height: 60px;
+    height: 60px;
 }
 
 nav ul {
@@ -556,4 +557,8 @@ nav ul li a {
     h3 {
         page-break-after: avoid;
     }
+}
+h1{
+    padding-top: 50px;
+    padding-bottom: 60px;
 }
