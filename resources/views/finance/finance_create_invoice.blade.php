@@ -23,13 +23,14 @@
     </div>
     </div>
     <div class="navbuttons">
-        <button class="navbutton"><span>Schedule Appointment</span></button>
         <button class="navbutton"><span>Client Information</span></button>
-        <button class="navbutton"><span>Create Client</span></button>
+        <button class="navbutton"><span>Create Invoice</span></button>
+        <button class="navbutton"><span>Overview Invoices</span></button>
     </div>
 </nav>
 
 <div class="main">
+
     <form action="/action_page.php" id="create_invoice">
         <label for="dateofinvoice"></label>
         <input placeholder = "Date of Invoice" class = "textbox-n" type = "text" onfocus = "(this.type = 'date')"  id = "date">
@@ -37,20 +38,28 @@
         <label for="invoicebtw"></label>
         <input type="text" id="invoicebtw" name="invoicebtw" placeholder="Invoice BTW" required>
 
+
         <label for="invoicenumber"></label>
         <input type="text" id="invoicenumber" name="invoicenumber" placeholder="Invoice Number (will be automatically generated)" disabled>
 
         <label for="invoiceexclusivebtw"></label>
         <input type="text" id="invoiceexclusivebtw" name="invoiceexclusivebtw" placeholder="Invoice exclusive BTW" required>
 
+
+<div class="wrapper">
         <textarea name="description" form="create_invoice" placeholder="Description" rows="7"></textarea>
 
-        <label for="invoicetotal"></label>
-        <input type="text" id="invoicetotal" name="invoicetotal" placeholder="Invoice total" required>
+        <div class="wrapper-for-button">
 
-        <!-- Search bar for clients -->
+            <label for="invoicetotal"></label>
+            <input type="text" id="invoicetotal" name="invoicetotal" placeholder="Invoice total" required>
 
-        <input type="submit" value="Submit">
+            <!-- Search bar for clients -->
+
+            <input type="submit" value="Save">
+        </div>
+</div>
+
     </form>
 </div>
 

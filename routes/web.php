@@ -33,3 +33,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/create_invoice', function() {
     return view('/finance/finance_create_invoice');
 });
+
+Route::get ( '/search', function () {
+    $data = App\Data::all ();
+    return view ( '/finance/finance_client_information' )->withData ( $data );
+} );
