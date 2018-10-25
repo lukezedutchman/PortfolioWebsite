@@ -7,11 +7,11 @@
     </div>
 
     <div class="navbuttons">
-        <a href="">Create Client</a>
-        <a href="">Schedule Appointment</a>
-        <a href="">Appointments</a>
-        <a href="">Create project</a>
-        <a href="">Client information</a>
+
+        <button class="navbutton"><span>Schedule Appointment</span></button>
+        <button class="navbutton"><span>Client Information</span></button>
+        <button class="navbutton"><span>Create Client</span></button>
     </div>
+
 
 </nav>

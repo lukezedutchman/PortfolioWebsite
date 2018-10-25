@@ -1,11 +1,12 @@
 <div class="form1">
-    <form action="">
+    <form action="{{'store'}}" methode="post">
+        @csrf
         <input name="search" placeholder="Search Client">
         <div class="form_grid">
             <div class="row-1">
-                <input type="project_name" placeholder="Project Name"><br>
-                <input type="start_date" placeholder="Start Date"><br>
-                <input type="end_date" placeholder="End Date">
+                <input name="projectname" type="text" placeholder="Project Name" required><br>
+                <input name="startdate" type="date" placeholder="Start Date"><br>
+                <input name="enddate" type="date" placeholder="End Date">
                 <input type="submit" value="save">
             </div>
             <div class="row-2">

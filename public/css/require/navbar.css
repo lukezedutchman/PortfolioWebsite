@@ -94,14 +94,14 @@ h1 {
     margin-left: 40px;
 }
 
-.navbutton span {
+.navbutton a {
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
 
-.navbutton span:after {
+.navbutton a:after {
     content: '\00bb';
     position: absolute;
     opacity: 0;
@@ -110,12 +110,12 @@ h1 {
     transition: 0.5s;
 }
 
-.navbutton:hover span {
+.navbutton:hover a {
     padding-right: 25px;
     color: black;
 }
 
-.navbutton:hover span:after {
+.navbutton:hover a:after {
     opacity: 1;
     right: 0;
     color: black;
