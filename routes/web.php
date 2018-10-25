@@ -45,60 +45,42 @@ Route::get('/create_invoice', function() {
     return view('/finance/finance_create_invoice');
 });
 
-<<<<<<< HEAD
-*/
-
-/*  Finance pages  */
-
-Route::get('/', 'HomeController@index');
-
-Route::get('/finance', 'FinanceController@index');
-Route::get('/finance/create', 'FinanceController@create');
-Route::get('/finance/client', 'FinanceController@client');
-Route::get('/finance/overview', 'FinanceController@overview');
-
-/*  Sales pages  */
-
-Route::get('/sales', 'SalesController@index');
-Route::get('/sales/schedule', 'SalesController@schedule');
-Route::get('/sales/client', 'SalesController@client');
-Route::get('/sales/create', 'SalesController@create');
-
-/*  Development pages  */
-
-Route::get('/development', 'DevelopmentController@index');
-Route::get('/finance/schedule-appointment', 'FinanceController@show');
-Route::get('/finance/client-information', 'FinanceController@show');
-Route::get('/finance/create-client', 'FinanceController@show');
-
-/*  Admin check route */
-
-Route::get('/admin', 'AdminController@admin')
-    ->middleware('is_admin')
-    ->name('admin');
-
-
-
-
-
-
-
-
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin', 'AdminController@index');
 
 
+/*  Finance pages  */
+Route::group(['middleware' => ['web']], function(){
+    Route::get('/', 'HomeController@index')->middleware('CheckFinance');
+    Route::get('/finance', 'FinanceController@index')->middleware('CheckFinance');
+    Route::get('/finance/create', 'FinanceController@create')->middleware('CheckFinance');
+    Route::get('/finance/client', 'FinanceController@client')->middleware('CheckFinance');
+    Route::get('/finance/overview', 'FinanceController@overview')->middleware('CheckFinance');
 
-Route::get('/administrator', function () {
-    return view('/administrator/administrator');
+/*  Sales pages  */
+    Route::get('/sales', 'SalesController@index')->middleware('CheckSales');
+    Route::get('/sales/schedule', 'SalesController@schedule')->middleware('CheckSales');
+    Route::get('/sales/client', 'SalesController@client')->middleware('CheckSales');
+    Route::get('/sales/create', 'SalesController@create')->middleware('CheckSales');
+
+/*  Development pages  */
+
+    Route::get('/development', 'DevelopmentController@index')->middleware('CheckDevelopment');
+    Route::get('/finance/schedule-appointment', 'FinanceController@show')->middleware('CheckDevelopment');
+    Route::get('/finance/client-information', 'FinanceController@show')->middleware('CheckDevelopment');
+    Route::get('/finance/create-client', 'FinanceController@show')->middleware('CheckDevelopment');
+
+/*  Admin check route */
+
+    Route::get('/admin', 'AdminController@admin')
+        ->middleware('is_admin')
+        ->name('admin');
 });
-/*
+
 
 Auth::routes();
 Route::get ( '/search', function () {
     $data = App\Data::all ();
     return view ( '/finance/finance_client_information' )->withData ( $data );
 } );
->>>>>>> master
-*/
