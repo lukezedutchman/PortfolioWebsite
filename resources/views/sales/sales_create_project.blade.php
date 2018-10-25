@@ -7,12 +7,14 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="{{asset('../css/require/navbar.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('../css/require/schedule_appointment.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('../css/require/create_project.css')}}"/>
     </head>
     <body>
-        @include('../require_files/sales_navbar')
+        <div class="navbar">
+            @include('../require_files/sales_navbar')
+        </div>
         <div class="container">
-            @include('../require_files/schedule_appointment')
+            @include('../require_files/create_project')
         </div>
     </body>
 </html>

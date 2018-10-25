@@ -67,7 +67,9 @@
                                     @csrf
                                 </form>
                             </div>
+                            <a href="{{ url('/finance') }}">Some Text</a>
                         </li>
+
                     @endguest
                 </ul>
             </div>
@@ -78,54 +80,7 @@
         @yield('content')
     </main>
 </div>
-<!-- mid center section admin page */ -->
-<div class="container">
-    <div class="selectdepartement">
-        <ul>
-            <li>
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <h2><i class="fas fa-dollar-sign"></i></h2>
-                        </div>
-                        <div class="flip-box-back">
-                            <a href="{{ url('/finance') }}"><h2>FINANCE</h2></a>
 
-                        </div>
-                    </div>
-                </div>
-            </li>
-
-            <li>
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <h2><i class="fas fa-laptop-code"></i></h2>
-                        </div>
-                        <div class="flip-box-back">
-                            <a href="{{ url('/development') }}"><h2>DEVELOPMENT</h2></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="flip-box">
-                    <div class="flip-box-inner">
-                        <div class="flip-box-front">
-                            <h2><i class="fas fa-chart-line"></i></h2>
-                        </div>
-                        <div class="flip-box-back">
-                            <a href="{{ url('/sales') }}"><h2>SALES</h2></a>
-                        </div>
-                    </div>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-
-
-<!-- end mid center section admin page -->
 
 
 

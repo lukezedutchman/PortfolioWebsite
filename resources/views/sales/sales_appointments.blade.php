@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -7,12 +7,16 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Document</title>
         <link rel="stylesheet" type="text/css" href="{{asset('../css/require/navbar.css')}}"/>
-        <link rel="stylesheet" type="text/css" href="{{asset('../css/require/schedule_appointment.css')}}"/>
+        <link rel="stylesheet" type="text/css" href="{{asset('../css/require/create_project.css')}}"/>
     </head>
     <body>
-        @include('../require_files/sales_navbar')
+        <div class="nav">
+            @include('../require_files/sales_navbar')
+        </div>
         <div class="container">
-            @include('../require_files/schedule_appointment')
+            <form action="">
+                <input type="search_client" placeholder="Search Client">
+            </form>
         </div>
     </body>
 </html>

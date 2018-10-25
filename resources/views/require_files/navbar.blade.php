@@ -20,7 +20,7 @@
             <div class="tooltip"><h2>?</h2>
                 <span class="tooltiptext">Tooltip text</span>
             </div>
-            </div>
+
             <div class="navbuttons">
                 <button class="navbutton"><span>Schedule Appointment</span></button>
                 <button class="navbutton"><span>Client Information</span></button>
