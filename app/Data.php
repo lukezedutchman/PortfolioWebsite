@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Data extends Model
 {
-    protected $table="invoice";
+    protected $invoice="invoice";
+    protected $client_information="client_information";
+    protected $contact_person="contact_person";
 }

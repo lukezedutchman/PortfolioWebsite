@@ -25,7 +25,7 @@ class FinanceController extends Controller
 
     public function client()
     {
-        return view('finance/finance_client_information');
+        return view('finance/finance_information');with->
     }
 }
 

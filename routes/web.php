@@ -91,7 +91,7 @@ Route::group(['middleware' => ['web']], function(){
     Route::get('/', 'HomeController@index')->middleware('CheckFinance');
     Route::get('/finance', 'FinanceController@index')->middleware('CheckFinance');
     Route::get('/finance/create', 'FinanceController@create')->middleware('CheckFinance');
-    Route::get('/finance/client', 'FinanceController@client')->middleware('CheckFinance');
+    Route::get('/finance/client', 'FinanceController@client');
     Route::get('/finance/overview', 'FinanceController@overview')->middleware('CheckFinance');
 
 /*  Sales pages  */
