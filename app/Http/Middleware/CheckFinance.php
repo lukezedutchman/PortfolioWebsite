@@ -16,9 +16,9 @@ class CheckFinance
      */
     public function handle($request, Closure $next)
     {
-        $id = Auth::User()->id;
+        $id = Auth::user()->DepartmentID;
 
-        if(Auth::guard($id) == 3){
+        if($id == 3 || $id == 1){
             return $next($request);
         }
         else {

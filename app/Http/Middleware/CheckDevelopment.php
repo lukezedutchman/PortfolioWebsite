@@ -16,9 +16,9 @@ class CheckDevelopment
      */
     public function handle($request, Closure $next)
     {
-        $id = Auth::User()->id;
+        $id = Auth::user()->DepartmentID;
 
-        if(Auth::guard($id) == 2){
+        if($id == 2 || $id == 1){
             return $next($request);
         }
         else {
