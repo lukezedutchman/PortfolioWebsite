@@ -16,9 +16,9 @@ class CheckSales
      */
     public function handle($request, Closure $next)
     {
-        $id = Auth::User()->id;
+        $id = Auth::user()->DepartmentID;
 
-        if(Auth::guard($id) == 4){
+        if($id == 4 || $id == 1){
             return $next($request);
         }
         else {

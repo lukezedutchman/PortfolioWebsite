@@ -10,7 +10,7 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-
+                        <h1>test</h1>
                         <div class="form-group row">
                             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
                             <div class="col-md-6">
@@ -36,6 +36,20 @@
                                     </span>
                                 @endif
                             </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="int" class="col-md-4 col-form-label text-md-right">{{ __('DepartmentID') }}</label>
+
+                            <div class="col-md-6">
+                                <select name="DepartmentID" required>
+                                    <option value="0" disabled selected>Select Department</option>
+                                    <option value="1">Admin</option>
+                                    <option value="2">Development</option>
+                                    <option value="3">Finance</option>
+                                    <option value="4">Sales</option>
+                                </select>
+                            <div>
                         </div>
 
                         <div class="form-group row">

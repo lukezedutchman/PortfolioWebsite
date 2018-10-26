@@ -16,7 +16,7 @@ class CheckAdmin
      */
     public function handle($request, Closure $next)
     {
-        $id = Auth::User()->DepartmentID;
+        $id = Auth::user()->DepartmentID;
 
         if(Auth::guard($id) == 1){
             return $next($request);
