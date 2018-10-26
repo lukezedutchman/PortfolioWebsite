@@ -96,9 +96,11 @@ Route::group(['middleware' => ['web']], function(){
 
 /*  Sales pages  */
     Route::get('/sales', 'SalesController@index')->middleware('CheckSales');
-    Route::get('/sales/schedule', 'SalesController@schedule')->middleware('CheckSales');
-    Route::get('/sales/client', 'SalesController@client')->middleware('CheckSales');
-    Route::get('/sales/create', 'SalesController@create')->middleware('CheckSales');
+    Route::get('/sales/schedule_appointment', 'SalesController@schedule_appointment')->middleware('CheckSales');
+    Route::get('/sales/client_information', 'SalesController@client_information')->middleware('CheckSales');
+    Route::get('/sales/create_project', 'SalesController@create_project')->middleware('CheckSales');
+    Route::get('/sales/appointments', 'SalesController@appointments')->middleware('CheckSales');
+    Route::get('/sales/create_client', 'SalesController@create_client')->middleware('CheckSales');
 
 /*  Development pages  */
 

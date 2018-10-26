@@ -13,22 +13,59 @@
         <link rel="stylesheet" href="main.css">
     </head>
     <body>
-        <nav>
-            <h1><b>BARROC IT</b><br>Software for real</h1>
+        <div id="app">
+            <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-            <h2>Finance</h2>
-            <div class="tooltip"><h2>?</h2>
-                <span class="tooltiptext">Tooltip text</span>
-            </div>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav mr-auto">
 
-            <div class="navbuttons">
-                <button class="navbutton"><span>Schedule Appointment</span></button>
-                <button class="navbutton"><span>Client Information</span></button>
-                <button class="navbutton"><span>Create Client</span></button>
-            </div>
+                        </ul>
 
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ml-auto">
+                            <!-- Authentication Links -->
+                            @guest
+                                <li class="nav-item">
+                                    @if (Route::has('register'))
+                                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    @endif
+                                </li>
+                            @else
+                                <li class="nav-item dropdown">
+                                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        {{ Auth::user()->name }} <span class="caret"></span>
+                                    </a>
 
-        </nav>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            @csrf
+                                        </form>
+                                    </div>
+                                </li>
+                            @endguest
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </div>
 
 
         <script src="js/vendor/modernizr-3.5.0.min.js"></script>
