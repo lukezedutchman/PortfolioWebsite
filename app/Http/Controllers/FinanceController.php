@@ -25,7 +25,8 @@ class FinanceController extends Controller
 
     public function client()
     {
-        return view('finance/finance_information');with->
+        $data = Data::all ();
+        return view('finance/finance_information')->withData ( $data );
     }
 }
 

@@ -9,4 +9,5 @@ class Data extends Model
     protected $invoice="invoice";
     protected $client_information="client_information";
     protected $contact_person="contact_person";
+    protected $table="datatables_data";
 }
