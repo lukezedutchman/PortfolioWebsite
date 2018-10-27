@@ -25,7 +25,7 @@
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
-    @include('../require_files/sales_navbar')
+        @include('../require_files/sales_navbar')
         <div class="container">
             <div class="create_client_grid">
                 <form action="">

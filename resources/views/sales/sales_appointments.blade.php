@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{asset('../css/home.css')}}"/>
         <link rel="stylesheet" type="text/css" href="{{asset('../css/require/create_project.css')}}"/>
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     </head>
     <body>
         @include('../require_files/sales_navbar')
