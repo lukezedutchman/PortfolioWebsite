@@ -10,6 +10,7 @@ Route::group(['middleware' => ['web']], function(){
     Route::get('register', 'MainController@register');
 
     Route::post('image-upload', 'MainController@imageUpload')->name('UploadImage');
+    Route::post('registerAccount', 'Auth\RegisterController@create')->name('registerAccount');
 });
 
 
