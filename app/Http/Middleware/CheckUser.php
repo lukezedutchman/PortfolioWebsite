@@ -18,7 +18,7 @@ class CheckUser
     {
         $id = Auth::user()->IsUser;
 
-        if(Auth::guard($id) == 1){
+        if(Auth::guard($id) == 0){
             return $next($request);
         }
         else {

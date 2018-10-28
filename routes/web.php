@@ -7,6 +7,7 @@ Route::group(['middleware' => ['web']], function(){
     Route::get('upload','MainController@upload');
     Route::get('login','MainController@login');
     Route::get('upload', 'MainController@upload');
+    Route::get('register', 'MainController@register');
 
     Route::post('image-upload', 'MainController@imageUpload')->name('UploadImage');
 });

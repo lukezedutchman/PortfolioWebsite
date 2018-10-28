@@ -4,4 +4,5 @@
     <a href="{{ url('gallery') }}">Gallery</a>
     <a href="{{ url('upload') }}">Upload</a>
     <a href="{{ url('login') }}">Login page</a>
+    <a href="{{ url('register') }}">Login page</a>
 </div>
